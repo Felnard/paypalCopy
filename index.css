@@ -18,7 +18,7 @@ nav {
   min-height: 72px;
   height: 84px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   position: sticky;
   top: 0;
@@ -26,8 +26,8 @@ nav {
 div.navs {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 50%;
+  justify-content: space-around;
+  width: 100%;
 }
 
 nav img {
@@ -115,13 +115,19 @@ div.send {
 div.send a {
   color: #0070ba;
   text-decoration: none;
-  padding: 13px 57px;
+  padding: 15px 60px;
   border-left: 1px solid rgb(245, 242, 242);
   font-weight: 700;
 }
 
 div.send a:hover {
   color: #024c7e;
+}
+
+div.send a:active {
+  border: 2px solid #0070ba;
+  box-shadow: 0 0 5px #0070ba;
+  border-radius: 5px;
 }
 
 small {
@@ -148,7 +154,7 @@ footer {
 }
 
 div.holder {
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -162,11 +168,11 @@ section.left {
   padding-bottom: 20px;
   border-bottom: 0.5px solid rgb(245, 242, 242);
 }
+
 section.right {
-  width: 50%;
-  position: relative;
-  left: 60%;
-  padding-top: 20px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 section.left a {
@@ -188,4 +194,18 @@ section.right p {
 .holder a:hover {
   color: #313131;
   text-decoration: underline;
+}
+
+@media (min-width: 1050px) {
+  div.holder {
+    width: 50%;
+  }
+}
+
+@media (max-width: 635px) {
+  section.right {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+  }
 }
